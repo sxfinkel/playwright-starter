@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.qa.learning.FirstTest" time="12.948" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.qa.learning.tests.RadioButtonTest" time="12.669" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,8 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\susan\AppData\Local\Temp\surefire5549147128987471765\surefirebooter-20260319194754785_3.jar C:\Users\susan\AppData\Local\Temp\surefire5549147128987471765 2026-03-19T19-47-54_669-jvmRun1 surefire-20260319194754785_1tmp surefire_0-20260319194754785_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\susan\AppData\Local\Temp\surefire5802926921227958128\surefirebooter-20260320133145476_3.jar C:\Users\susan\AppData\Local\Temp\surefire5802926921227958128 2026-03-20T13-31-45_345-jvmRun1 surefire-20260320133145476_1tmp surefire_0-20260320133145476_2tmp"/>
     <property name="jdk.debug" value="release"/>
+    <property name="test" value="RadioButtonTest"/>
     <property name="surefire.test.class.path" value="C:\Users\susan\projects\playwright-starter\target\test-classes;C:\Users\susan\projects\playwright-starter\target\classes;C:\Users\susan\.m2\repository\com\microsoft\playwright\playwright\1.47.0\playwright-1.47.0.jar;C:\Users\susan\.m2\repository\com\google\code\gson\gson\2.11.0\gson-2.11.0.jar;C:\Users\susan\.m2\repository\com\google\errorprone\error_prone_annotations\2.27.0\error_prone_annotations-2.27.0.jar;C:\Users\susan\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\susan\.m2\repository\com\microsoft\playwright\driver\1.47.0\driver-1.47.0.jar;C:\Users\susan\.m2\repository\com\microsoft\playwright\driver-bundle\1.47.0\driver-bundle-1.47.0.jar;C:\Users\susan\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\susan\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\susan\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\susan\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\susan\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\susan\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\susan\.m2\repository\org\apache\logging\log4j\log4j-core\2.23.1\log4j-core-2.23.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\susan"/>
@@ -30,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\susan\AppData\Local\Temp\surefire5549147128987471765\surefirebooter-20260319194754785_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\susan\AppData\Local\Temp\surefire5802926921227958128\surefirebooter-20260320133145476_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.4+8-LTS-274"/>
@@ -58,12 +59,42 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testFailedLogin" classname="com.qa.learning.FirstTest" time="6.541">
-    <system-out><![CDATA[✅ Error message verified
+  <testcase name="testSelectImpressiveRadioButton" classname="com.qa.learning.tests.RadioButtonTest" time="3.056">
+    <system-out><![CDATA[13:31:46 [INFO ] com.qa.learning.tests.RadioButtonTest - === Starting RadioButtonTest suite ===
+13:31:48 [INFO ] com.qa.learning.tests.RadioButtonTest - Browser launched successfully
+13:31:49 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
+13:31:49 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
+13:31:49 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
+13:31:51 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'Impressive' radio button
+13:31:51 [INFO ] com.qa.learning.pages.BasePage - Selecting 'Impressive' radio button
+13:31:52 [INFO ] com.qa.learning.pages.BasePage - Result text: Impressive
+13:31:52 [INFO ] com.qa.learning.tests.RadioButtonTest - Impressive selection verified
+13:31:52 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page
 ]]></system-out>
   </testcase>
-  <testcase name="testPlaywrightTitle" classname="com.qa.learning.FirstTest" time="3.96">
-    <system-out><![CDATA[✅ Title: Fast and reliable end-to-end testing for modern web apps | Playwright
+  <testcase name="testSelectYesRadioButton" classname="com.qa.learning.tests.RadioButtonTest" time="2.406">
+    <system-out><![CDATA[13:31:52 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
+13:31:52 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
+13:31:52 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
+13:31:54 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'Yes' radio button
+13:31:54 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/before_select_yes_20260320_133154.png
+13:31:54 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved: target/screenshots/before_select_yes_20260320_133154.png
+13:31:54 [INFO ] com.qa.learning.pages.BasePage - Selecting 'Yes' radio button
+13:31:54 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/after_select_yes_20260320_133154.png
+13:31:54 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved: target/screenshots/after_select_yes_20260320_133154.png
+13:31:54 [INFO ] com.qa.learning.pages.BasePage - Result text: Yes
+13:31:54 [INFO ] com.qa.learning.tests.RadioButtonTest - Yes selection verified
+13:31:54 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page
+]]></system-out>
+  </testcase>
+  <testcase name="testNoRadioButtonIsDisabled" classname="com.qa.learning.tests.RadioButtonTest" time="3.905">
+    <system-out><![CDATA[13:31:54 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
+13:31:54 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
+13:31:54 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
+13:31:58 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'No' radio button disabled state
+13:31:58 [INFO ] com.qa.learning.pages.BasePage - 'No' radio button disabled status: true
+13:31:58 [INFO ] com.qa.learning.tests.RadioButtonTest - 'No' radio button is correctly disabled
+13:31:58 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page
 ]]></system-out>
   </testcase>
 </testsuite>

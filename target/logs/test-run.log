@@ -1,52 +1,31 @@
-2026-03-19 20:03:25 [INFO ] com.qa.learning.tests.CheckBoxTest - === Starting CheckBoxTest suite ===
-2026-03-19 20:03:28 [INFO ] com.qa.learning.tests.CheckBoxTest - Setting up page for CheckBoxTest
-2026-03-19 20:03:28 [INFO ] com.qa.learning.pages.CheckBoxPage - Initializing CheckBoxPage locators
-2026-03-19 20:03:28 [INFO ] com.qa.learning.pages.CheckBoxPage - Navigating to CheckBox page
-2026-03-19 20:03:32 [INFO ] com.qa.learning.tests.CheckBoxTest - Running test: testSelectHomeCheckbox
-2026-03-19 20:03:32 [INFO ] com.qa.learning.pages.CheckBoxPage - Tree already expanded on page load - skipping expand
-2026-03-19 20:03:32 [INFO ] com.qa.learning.pages.CheckBoxPage - Selecting Home checkbox
-2026-03-19 20:03:32 [INFO ] com.qa.learning.pages.CheckBoxPage - Result display visible: true
-2026-03-19 20:03:32 [INFO ] com.qa.learning.pages.CheckBoxPage - Selected result displayed: You have selected :
-home
-desktop
-documents
-downloads
-notes
-commands
-workspace
-office
-wordFile
-excelFile
-react
-angular
-veu
-public
-private
-classified
-general
-2026-03-19 20:03:32 [INFO ] com.qa.learning.tests.CheckBoxTest - ✅ Test passed - result: You have selected :
-home
-desktop
-documents
-downloads
-notes
-commands
-workspace
-office
-wordFile
-excelFile
-react
-angular
-veu
-public
-private
-classified
-general
-2026-03-19 20:03:32 [INFO ] com.qa.learning.tests.CheckBoxTest - Closing page after test
-2026-03-19 20:03:32 [INFO ] com.qa.learning.tests.CheckBoxTest - Setting up page for CheckBoxTest
-2026-03-19 20:03:32 [INFO ] com.qa.learning.pages.CheckBoxPage - Initializing CheckBoxPage locators
-2026-03-19 20:03:32 [INFO ] com.qa.learning.pages.CheckBoxPage - Navigating to CheckBox page
-2026-03-19 20:03:35 [INFO ] com.qa.learning.tests.CheckBoxTest - Running test: testNoResultBeforeSelection
-2026-03-19 20:03:35 [INFO ] com.qa.learning.tests.CheckBoxTest - ✅ Test passed - no result shown before selection
-2026-03-19 20:03:35 [INFO ] com.qa.learning.tests.CheckBoxTest - Closing page after test
-2026-03-19 20:03:35 [INFO ] com.qa.learning.tests.CheckBoxTest - === CheckBoxTest suite complete ===
+2026-03-20 13:31:46 [INFO ] com.qa.learning.tests.RadioButtonTest - === Starting RadioButtonTest suite ===
+2026-03-20 13:31:48 [INFO ] com.qa.learning.tests.RadioButtonTest - Browser launched successfully
+2026-03-20 13:31:49 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
+2026-03-20 13:31:49 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
+2026-03-20 13:31:49 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
+2026-03-20 13:31:51 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'Impressive' radio button
+2026-03-20 13:31:51 [INFO ] com.qa.learning.pages.BasePage - Selecting 'Impressive' radio button
+2026-03-20 13:31:52 [INFO ] com.qa.learning.pages.BasePage - Result text: Impressive
+2026-03-20 13:31:52 [INFO ] com.qa.learning.tests.RadioButtonTest - Impressive selection verified
+2026-03-20 13:31:52 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page
+2026-03-20 13:31:52 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
+2026-03-20 13:31:52 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
+2026-03-20 13:31:52 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
+2026-03-20 13:31:54 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'Yes' radio button
+2026-03-20 13:31:54 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/before_select_yes_20260320_133154.png
+2026-03-20 13:31:54 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved: target/screenshots/before_select_yes_20260320_133154.png
+2026-03-20 13:31:54 [INFO ] com.qa.learning.pages.BasePage - Selecting 'Yes' radio button
+2026-03-20 13:31:54 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/after_select_yes_20260320_133154.png
+2026-03-20 13:31:54 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved: target/screenshots/after_select_yes_20260320_133154.png
+2026-03-20 13:31:54 [INFO ] com.qa.learning.pages.BasePage - Result text: Yes
+2026-03-20 13:31:54 [INFO ] com.qa.learning.tests.RadioButtonTest - Yes selection verified
+2026-03-20 13:31:54 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page
+2026-03-20 13:31:54 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
+2026-03-20 13:31:54 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
+2026-03-20 13:31:54 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
+2026-03-20 13:31:58 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'No' radio button disabled state
+2026-03-20 13:31:58 [INFO ] com.qa.learning.pages.BasePage - 'No' radio button disabled status: true
+2026-03-20 13:31:58 [INFO ] com.qa.learning.tests.RadioButtonTest - 'No' radio button is correctly disabled
+2026-03-20 13:31:58 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page
+2026-03-20 13:31:58 [INFO ] com.qa.learning.tests.RadioButtonTest - === Ending RadioButtonTest suite ===
+2026-03-20 13:31:58 [INFO ] com.qa.learning.tests.RadioButtonTest - Browser and Playwright closed successfully
