@@ -1,2 +1,6 @@
+com\qa\learning\pages\DropdownPage.class
+com\qa\learning\pages\TextBoxPage.class
 com\qa\learning\pages\BasePage.class
+com\qa\learning\pages\CheckBoxPage.class
 com\qa\learning\pages\LoginPage.class
+com\qa\learning\pages\AlertsPage.class

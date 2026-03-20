@@ -1,2 +1,6 @@
+com\qa\learning\tests\DropdownTest.class
 com\qa\learning\FirstTest.class
+com\qa\learning\tests\CheckBoxTest.class
+com\qa\learning\tests\TextBoxTest.class
+com\qa\learning\tests\AlertsTest.class
 com\qa\learning\tests\LoginTest.class
