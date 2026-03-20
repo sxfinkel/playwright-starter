@@ -1,6 +1,48 @@
+# Maven build output
 target/
+
+# Java compiled files
 *.class
+*.jar
+*.war
+
+# IDE files - IntelliJ
 .idea/
 *.iml
+*.ipr
+*.iws
+
+# IDE files - VS Code
+.vscode/
+*.code-workspace
+
+# Log files
+*.log
+logs/
+target/logs/
+
+# Test reports and results
 allure-results/
+allure-report/
 reports/
+target/site/
+
+# Playwright specific
+test-results/
+playwright-report/
+
+# OS generated files
+.DS_Store           # Mac
+Thumbs.db           # Windows
+desktop.ini         # Windows
+
+# Environment and secrets - NEVER commit these
+.env
+*.properties.local
+secrets/
+credentials/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
