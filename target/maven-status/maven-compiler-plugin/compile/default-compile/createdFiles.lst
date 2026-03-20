@@ -1,1 +1,2 @@
-com\qa\learning\App.class
+com\qa\learning\pages\BasePage.class
+com\qa\learning\pages\LoginPage.class
