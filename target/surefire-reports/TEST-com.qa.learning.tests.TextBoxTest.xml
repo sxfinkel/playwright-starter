@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.qa.learning.tests.RadioButtonTest" time="10.123" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.qa.learning.tests.TextBoxTest" time="3.49" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -59,43 +59,20 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testSelectImpressiveRadioButton" classname="com.qa.learning.tests.RadioButtonTest" time="3.049">
-    <system-out><![CDATA[14:42:21 [INFO ] com.qa.learning.tests.RadioButtonTest - === Starting RadioButtonTest suite ===
-14:42:22 [INFO ] com.qa.learning.tests.RadioButtonTest - Browser launched successfully
-14:42:22 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
-14:42:23 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
-14:42:23 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
-14:42:24 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'Impressive' radio button
-14:42:25 [INFO ] com.qa.learning.tests.RadioButtonTest - Screenshot attached to Allure: impressive_radio_before
-14:42:25 [INFO ] com.qa.learning.pages.BasePage - Selecting 'Impressive' radio button
-14:42:25 [INFO ] com.qa.learning.tests.RadioButtonTest - Screenshot attached to Allure: impressive_radio_after
-14:42:25 [INFO ] com.qa.learning.pages.BasePage - Result text: Impressive
-14:42:25 [INFO ] com.qa.learning.tests.RadioButtonTest - Impressive selection verified
-14:42:25 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page after test
-]]></system-out>
-  </testcase>
-  <testcase name="testSelectYesRadioButton" classname="com.qa.learning.tests.RadioButtonTest" time="2.312">
-    <system-out><![CDATA[14:42:25 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
-14:42:25 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
-14:42:25 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
-14:42:27 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'Yes' radio button
-14:42:27 [INFO ] com.qa.learning.tests.RadioButtonTest - Screenshot attached to Allure: yes_radio_before
-14:42:27 [INFO ] com.qa.learning.pages.BasePage - Selecting 'Yes' radio button
-14:42:27 [INFO ] com.qa.learning.tests.RadioButtonTest - Screenshot attached to Allure: yes_radio_after
-14:42:27 [INFO ] com.qa.learning.pages.BasePage - Result text: Yes
-14:42:27 [INFO ] com.qa.learning.tests.RadioButtonTest - Yes selection verified
-14:42:27 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page after test
-]]></system-out>
-  </testcase>
-  <testcase name="testNoRadioButtonIsDisabled" classname="com.qa.learning.tests.RadioButtonTest" time="3.582">
-    <system-out><![CDATA[14:42:27 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
-14:42:28 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
-14:42:28 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
-14:42:31 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'No' radio button disabled state
-14:42:31 [INFO ] com.qa.learning.tests.RadioButtonTest - Screenshot attached to Allure: no_radio_disabled_state
-14:42:31 [INFO ] com.qa.learning.pages.BasePage - 'No' radio button disabled status: true
-14:42:31 [INFO ] com.qa.learning.tests.RadioButtonTest - 'No' radio button is correctly disabled
-14:42:31 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page after test
+  <testcase name="testTextBoxForm" classname="com.qa.learning.tests.TextBoxTest" time="2.347">
+    <system-out><![CDATA[14:42:31 [INFO ] com.qa.learning.tests.TextBoxTest - === Starting TextBoxTest suite ===
+14:42:32 [INFO ] com.qa.learning.tests.TextBoxTest - Browser launched successfully
+14:42:32 [INFO ] com.qa.learning.tests.TextBoxTest - Creating new page and navigating to TextBox
+14:42:32 [INFO ] com.qa.learning.pages.TextBoxPage - Initializing TextBoxPage locators
+14:42:32 [INFO ] com.qa.learning.pages.TextBoxPage - Navigating to Text Box page
+14:42:34 [INFO ] com.qa.learning.tests.TextBoxTest - Running test: testTextBoxForm
+14:42:34 [INFO ] com.qa.learning.pages.TextBoxPage - Filling form with name: Susan Barrows and email: susan@test.com
+14:42:34 [INFO ] com.qa.learning.pages.TextBoxPage - Clicking submit button
+14:42:34 [INFO ] com.qa.learning.tests.TextBoxTest - Asserting output name is correct
+14:42:34 [INFO ] com.qa.learning.tests.TextBoxTest - Asserting output email is correct
+14:42:34 [INFO ] com.qa.learning.pages.TextBoxPage - Output name displayed: Name:Susan Barrows
+14:42:34 [INFO ] com.qa.learning.tests.TextBoxTest - ✅ Test passed: Name:Susan Barrows
+14:42:34 [INFO ] com.qa.learning.tests.TextBoxTest - Closing page after test
 ]]></system-out>
   </testcase>
 </testsuite>

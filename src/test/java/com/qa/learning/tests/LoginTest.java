@@ -1,68 +1,82 @@
 package com.qa.learning.tests;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import com.microsoft.playwright.*;
 import com.qa.learning.pages.LoginPage;
+import io.qameta.allure.Allure;
 import org.junit.jupiter.api.*;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+import java.io.ByteArrayInputStream;
 
 // LoginTest contains all test scenarios for the login page
-// Notice: no locators here - the page object handles all of that
 public class LoginTest {
 
-    // These are shared across all tests in this class
-    static Playwright playwright; // Playwright instance - created once
-    static Browser browser; // Browser instance - created once
-    Page page; // Fresh page for each test
-    LoginPage loginPage; // Our page object
+    // Logger for this test class
+    private static final Logger log = LogManager.getLogger(LoginTest.class);
 
-    // Runs ONCE before all tests - launches the browser
+    static Playwright playwright;
+    static Browser browser;
+    Page page;
+    LoginPage loginPage;
+
     @BeforeAll
     static void launchBrowser() {
+        log.info("=== Starting LoginTest suite ===");
         playwright = Playwright.create();
         browser = playwright.chromium().launch(
-                new BrowserType.LaunchOptions().setHeadless(true) // true = no visible browser
-        );
+                new BrowserType.LaunchOptions().setHeadless(true));
+        log.info("Browser launched successfully");
     }
 
-    // Runs before EACH test - creates a fresh page and navigates to login
     @BeforeEach
     void setUp() {
-        page = browser.newPage(); // fresh page = no shared state between tests
-        loginPage = new LoginPage(page); // create the page object with our page
-        loginPage.navigate(); // go to the login URL
+        log.info("Setting up page for LoginTest");
+        page = browser.newPage();
+        loginPage = new LoginPage(page);
+        loginPage.navigate();
     }
 
-    // Test 1 - verify wrong credentials show an error message
+    // Helper - captures screenshot and attaches to Allure report
+    private void captureScreenshot(String name) {
+        byte[] screenshot = page.screenshot(
+                new Page.ScreenshotOptions().setFullPage(true));
+        Allure.addAttachment(name, "image/png",
+                new ByteArrayInputStream(screenshot), "png");
+        log.info("Screenshot attached to Allure: {}", name);
+    }
+
     @Test
     @DisplayName("Invalid login shows error message")
     void testInvalidLogin() {
-        loginPage.login("wronguser", "wrongpass"); // attempt bad login
-
-        // Assert the error banner contains the expected text
+        log.info("Running test: testInvalidLogin");
+        captureScreenshot("invalid_login_before");
+        loginPage.login("wronguser", "wrongpass");
+        captureScreenshot("invalid_login_after");
         assertThat(page.locator("#flash")).containsText("Your username is invalid!");
-        System.out.println("✅ Error message: " + loginPage.getErrorMessage());
+        log.info("✅ Error message verified");
     }
 
-    // Test 2 - verify correct credentials land on the secure page
     @Test
     @DisplayName("Valid login reaches secure area")
     void testValidLogin() {
-        loginPage.login("tomsmith", "SuperSecretPassword!"); // known valid credentials
-
-        // Assert the URL changed to the secure area after login
+        log.info("Running test: testValidLogin");
+        captureScreenshot("valid_login_before");
+        loginPage.login("tomsmith", "SuperSecretPassword!");
+        captureScreenshot("valid_login_after");
         assertThat(page).hasURL("https://the-internet.herokuapp.com/secure");
-        System.out.println("✅ Logged in successfully");
+        log.info("✅ Logged in successfully");
     }
 
-    // Runs after EACH test - closes the page to free up memory
     @AfterEach
     void closePage() {
+        log.info("Closing page after test");
         page.close();
     }
 
-    // Runs ONCE after all tests - shuts down browser and Playwright
     @AfterAll
     static void closeBrowser() {
+        log.info("=== LoginTest suite complete ===");
         browser.close();
         playwright.close();
     }

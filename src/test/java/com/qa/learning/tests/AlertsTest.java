@@ -8,6 +8,8 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.ByteArrayInputStream;
+
 @Epic("DemoQA - Alerts")
 @Feature("Browser Alerts")
 public class AlertsTest {
@@ -34,6 +36,16 @@ public class AlertsTest {
         page = browser.newPage();
         alertsPage = new AlertsPage(page);
         alertsPage.navigate();
+    }
+
+    // Helper method - defined once, used by all tests
+    // Captures screenshot and attaches directly to Allure report
+    private void captureScreenshot(String name) {
+        byte[] screenshot = page.screenshot(
+                new Page.ScreenshotOptions().setFullPage(true));
+        Allure.addAttachment(name, "image/png",
+                new ByteArrayInputStream(screenshot), "png");
+        log.info("Screenshot attached to Allure: {}", name);
     }
 
     @Test

@@ -2,11 +2,16 @@ package com.qa.learning.tests;
 
 import com.microsoft.playwright.*;
 import com.qa.learning.pages.CheckBoxPage;
+
+import io.qameta.allure.Allure;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.*;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.io.ByteArrayInputStream;
 
 public class CheckBoxTest {
 
@@ -31,6 +36,16 @@ public class CheckBoxTest {
         page = browser.newPage();
         checkBoxPage = new CheckBoxPage(page);
         checkBoxPage.navigate();
+    }
+
+    // Helper method - defined once, used by all tests
+    // Captures screenshot and attaches directly to Allure report
+    private void captureScreenshot(String name) {
+        byte[] screenshot = page.screenshot(
+                new Page.ScreenshotOptions().setFullPage(true));
+        Allure.addAttachment(name, "image/png",
+                new ByteArrayInputStream(screenshot), "png");
+        log.info("Screenshot attached to Allure: {}", name);
     }
 
     @Test
