@@ -66,8 +66,13 @@ public class CheckBoxTest {
     }
 
     @AfterEach
-    void closePage() {
-        log.info("Closing page after test");
+    void closePage(TestInfo testInfo) {
+        // Take end of test screenshot and attach to Allure
+        String testName = testInfo.getTestMethod()
+                .map(m -> m.getName())
+                .orElse("unknown");
+        checkBoxPage.takeScreenshot("end_" + testName);
+        log.info("Closing page after: {}", testInfo.getDisplayName());
         page.close();
     }
 
