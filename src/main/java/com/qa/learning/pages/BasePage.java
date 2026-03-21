@@ -1,65 +1,69 @@
 package com.qa.learning.pages;
 
 import com.microsoft.playwright.Page;
+import io.qameta.allure.Allure;
+import io.qameta.allure.Attachment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import java.io.ByteArrayInputStream;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 // BasePage is the parent class for all page objects
-// All page objects inherit common functionality from here
+// All page objects inherit screenshot and Allure attachment capability
 public class BasePage {
 
-    // Logger instance — every class that extends BasePage can use this
     protected static final Logger log = LogManager.getLogger(BasePage.class);
-
-    // 'page' represents the browser page
     protected Page page;
 
     public BasePage(Page page) {
         this.page = page;
     }
 
-    // Returns the current page title
+    // Returns current page title
     public String getTitle() {
         String title = page.title();
         log.info("Current page title: {}", title);
         return title;
     }
 
-    // Navigates to a given URL
+    // Navigates to a URL
     public void navigateTo(String url) {
         log.info("Navigating to: {}", url);
         page.navigate(url);
     }
 
-    // Original single argument version - keeps existing tests working
+    // Takes screenshot, saves to file AND attaches to Allure report
     public void takeScreenshot(String fileName) {
         takeScreenshot(fileName, "");
     }
 
-    // New version with test name and step - used in RadioButtonTest
+    // Takes screenshot with step name, saves to file AND attaches to Allure report
     public void takeScreenshot(String testName, String step) {
         String timestamp = LocalDateTime.now()
                 .format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
 
-        // If step is empty just use the name, otherwise combine both
+        // Build meaningful name
         String name = step.isEmpty() ? testName : testName + "_" + step;
         String filePath = "target/screenshots/" + name + "_" + timestamp + ".png";
 
         log.info("Capturing screenshot: {}", filePath);
 
-        page.screenshot(new Page.ScreenshotOptions()
+        // Take screenshot as byte array — needed for Allure attachment
+        byte[] screenshot = page.screenshot(new Page.ScreenshotOptions()
                 .setPath(Paths.get(filePath))
                 .setFullPage(true));
 
-        log.info("Screenshot saved: {}", filePath);
+        // Attach screenshot directly to Allure report
+        Allure.addAttachment(name, new ByteArrayInputStream(screenshot));
+
+        log.info("Screenshot saved and attached to Allure report: {}", filePath);
     }
 
-    // Takes a screenshot automatically on failure
+    // Failure screenshot — always captured, clearly labeled
     public void takeScreenshotOnFailure(String testName) {
-        log.warn("Test failed - capturing failure screenshot for: {}", testName);
+        log.warn("Test failed - capturing failure screenshot: {}", testName);
         takeScreenshot("FAILED_" + testName);
     }
 }

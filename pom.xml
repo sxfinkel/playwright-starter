@@ -43,23 +43,73 @@
       <version>2.23.1</version>
     </dependency>
 
+    <!-- Allure JUnit5 - no scope so BasePage can access it -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-junit5</artifactId>
+      <version>2.25.0</version>
+    </dependency>
+
+    <!-- Allure commons - needed for Allure.addAttachment in BasePage -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-java-commons</artifactId>
+      <version>2.25.0</version>
+    </dependency>
+
+    <!-- AspectJ - required for Allure to intercept test execution -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.20</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Fixes SLF4J warning from Allure -->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>2.0.9</version>
+    </dependency>
+
   </dependencies>
 
   <build>
     <plugins>
 
-      <!-- Surefire - runs your JUnit tests -->
+      <!-- Surefire - runs JUnit tests with Allure agent -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.1.2</version>
-      </plugin>
+        <configuration>
+            <argLine>
+                -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.20/aspectjweaver-1.9.20.jar"
+            </argLine>
+            <systemPropertyVariables>
+                <!-- Tells Allure where to write results -->
+                <allure.results.directory>
+                    ${project.build.directory}/allure-results
+                </allure.results.directory>
+            </systemPropertyVariables>
+        </configuration>
+    </plugin>
 
       <!-- Site plugin - generates HTML reports -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
         <version>3.12.1</version>
+      </plugin>
+
+      <!-- Allure Maven plugin -->
+      <plugin>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-maven</artifactId>
+        <version>2.12.0</version>
+        <configuration>
+          <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
+        </configuration>
       </plugin>
 
       <!-- Compiler plugin - sets Java version to 17 -->
