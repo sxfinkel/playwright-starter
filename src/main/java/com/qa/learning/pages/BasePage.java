@@ -1,5 +1,7 @@
 package com.qa.learning.pages;
 
+import io.qameta.allure.Allure;
+import java.io.ByteArrayInputStream;
 import com.microsoft.playwright.Page;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -50,16 +52,15 @@ public class BasePage {
 
         log.info("Capturing screenshot: {}", filePath);
 
-        page.screenshot(new Page.ScreenshotOptions()
+        // Take screenshot as byte array - needed for Allure attachment
+        byte[] screenshot = page.screenshot(new Page.ScreenshotOptions()
                 .setPath(Paths.get(filePath))
                 .setFullPage(true));
 
-        log.info("Screenshot saved: {}", filePath);
-    }
+        // Attach screenshot to Allure report as image
+        Allure.addAttachment(name, "image/png",
+                new ByteArrayInputStream(screenshot), "png");
 
-    // Takes a screenshot automatically on failure
-    public void takeScreenshotOnFailure(String testName) {
-        log.warn("Test failed - capturing failure screenshot for: {}", testName);
-        takeScreenshot("FAILED_" + testName);
+        log.info("Screenshot saved and attached to Allure report: {}", filePath);
     }
 }
