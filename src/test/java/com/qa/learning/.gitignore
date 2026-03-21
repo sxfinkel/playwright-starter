@@ -1,4 +1,10 @@
-# Maven build output
+# Create .gitignore file
+New-Item -Name ".gitignore" -ItemType File
+```
+
+Then open it in VS Code and paste this content:
+```
+# Maven build output - never commit this
 target/
 
 # Java compiled files
@@ -19,22 +25,23 @@ target/
 # Log files
 *.log
 logs/
-target/logs/
 
 # Test reports and results
 allure-results/
 allure-report/
 reports/
-target/site/
 
 # Playwright specific
 test-results/
 playwright-report/
 
+# Screenshots
+screenshots/
+
 # OS generated files
-.DS_Store           # Mac
-Thumbs.db           # Windows
-desktop.ini         # Windows
+.DS_Store
+Thumbs.db
+desktop.ini
 
 # Environment and secrets - NEVER commit these
 .env
