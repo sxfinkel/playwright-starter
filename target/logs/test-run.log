@@ -1,0 +1,209 @@
+2026-03-23 14:25:27 [INFO ] com.qa.learning.tests.AlertsTest - === Starting AlertsTest suite ===
+2026-03-23 14:25:27 [INFO ] com.qa.learning.tests.AlertsTest - Browser launched successfully
+2026-03-23 14:25:27 [INFO ] com.qa.learning.tests.AlertsTest - Creating new page and navigating to Alerts page
+2026-03-23 14:25:28 [INFO ] com.qa.learning.pages.AlertsPage - Initializing AlertsPage locators
+2026-03-23 14:25:28 [INFO ] com.qa.learning.pages.AlertsPage - Navigating to Alerts page
+2026-03-23 14:25:30 [INFO ] com.qa.learning.tests.AlertsTest - Running test: testSimpleAlert
+2026-03-23 14:25:30 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/simple_alert_before_20260323_142530.png
+2026-03-23 14:25:30 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/simple_alert_before_20260323_142530.png
+2026-03-23 14:25:30 [INFO ] com.qa.learning.pages.AlertsPage - Setting up alert listener and clicking alert button
+2026-03-23 14:25:30 [INFO ] com.qa.learning.pages.AlertsPage - Alert appeared with message: You clicked a button
+2026-03-23 14:25:30 [INFO ] com.qa.learning.pages.AlertsPage - Alert accepted successfully
+2026-03-23 14:25:30 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/simple_alert_after_20260323_142530.png
+2026-03-23 14:25:30 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/simple_alert_after_20260323_142530.png
+2026-03-23 14:25:30 [INFO ] com.qa.learning.tests.AlertsTest - ✅ Simple alert accepted successfully
+2026-03-23 14:25:30 [INFO ] com.qa.learning.tests.AlertsTest - Closing page after test
+2026-03-23 14:25:30 [INFO ] com.qa.learning.tests.AlertsTest - Creating new page and navigating to Alerts page
+2026-03-23 14:25:30 [INFO ] com.qa.learning.pages.AlertsPage - Initializing AlertsPage locators
+2026-03-23 14:25:30 [INFO ] com.qa.learning.pages.AlertsPage - Navigating to Alerts page
+2026-03-23 14:25:32 [INFO ] com.qa.learning.tests.AlertsTest - Running test: testPromptInput
+2026-03-23 14:25:32 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/prompt_alert_before_20260323_142532.png
+2026-03-23 14:25:32 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/prompt_alert_before_20260323_142532.png
+2026-03-23 14:25:32 [INFO ] com.qa.learning.pages.AlertsPage - Setting up prompt listener - will type: Susan
+2026-03-23 14:25:32 [INFO ] com.qa.learning.pages.AlertsPage - Prompt appeared: Please enter your name
+2026-03-23 14:25:32 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/prompt_alert_after_20260323_142532.png
+2026-03-23 14:25:32 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/prompt_alert_after_20260323_142532.png
+2026-03-23 14:25:32 [INFO ] com.qa.learning.pages.AlertsPage - Prompt result: You entered Susan
+2026-03-23 14:25:32 [INFO ] com.qa.learning.tests.AlertsTest - ✅ Prompt input verified
+2026-03-23 14:25:32 [INFO ] com.qa.learning.tests.AlertsTest - Closing page after test
+2026-03-23 14:25:32 [INFO ] com.qa.learning.tests.AlertsTest - Creating new page and navigating to Alerts page
+2026-03-23 14:25:32 [INFO ] com.qa.learning.pages.AlertsPage - Initializing AlertsPage locators
+2026-03-23 14:25:32 [INFO ] com.qa.learning.pages.AlertsPage - Navigating to Alerts page
+2026-03-23 14:25:34 [INFO ] com.qa.learning.tests.AlertsTest - Running test: testConfirmDismiss
+2026-03-23 14:25:34 [INFO ] com.qa.learning.pages.AlertsPage - Setting up confirm listener - will click Cancel
+2026-03-23 14:25:34 [INFO ] com.qa.learning.pages.AlertsPage - Confirm box appeared: Do you confirm action?
+2026-03-23 14:25:34 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/confirm_alert_after_dismiss_20260323_142534.png
+2026-03-23 14:25:34 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/confirm_alert_after_dismiss_20260323_142534.png
+2026-03-23 14:25:34 [INFO ] com.qa.learning.pages.AlertsPage - Confirm result: You selected Cancel
+2026-03-23 14:25:34 [INFO ] com.qa.learning.tests.AlertsTest - ✅ Confirm dismissed - result verified
+2026-03-23 14:25:34 [INFO ] com.qa.learning.tests.AlertsTest - Closing page after test
+2026-03-23 14:25:34 [INFO ] com.qa.learning.tests.AlertsTest - Creating new page and navigating to Alerts page
+2026-03-23 14:25:34 [INFO ] com.qa.learning.pages.AlertsPage - Initializing AlertsPage locators
+2026-03-23 14:25:34 [INFO ] com.qa.learning.pages.AlertsPage - Navigating to Alerts page
+2026-03-23 14:25:36 [INFO ] com.qa.learning.tests.AlertsTest - Running test: testConfirmAccept
+2026-03-23 14:25:36 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/confirm_alert_before_20260323_142536.png
+2026-03-23 14:25:36 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/confirm_alert_before_20260323_142536.png
+2026-03-23 14:25:36 [INFO ] com.qa.learning.pages.AlertsPage - Setting up confirm listener - will click OK
+2026-03-23 14:25:36 [INFO ] com.qa.learning.pages.AlertsPage - Confirm box appeared: Do you confirm action?
+2026-03-23 14:25:36 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/confirm_alert_after_accept_20260323_142536.png
+2026-03-23 14:25:37 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/confirm_alert_after_accept_20260323_142536.png
+2026-03-23 14:25:37 [INFO ] com.qa.learning.pages.AlertsPage - Confirm result: You selected Ok
+2026-03-23 14:25:37 [INFO ] com.qa.learning.tests.AlertsTest - ✅ Confirm accepted - result verified
+2026-03-23 14:25:37 [INFO ] com.qa.learning.tests.AlertsTest - Closing page after test
+2026-03-23 14:25:37 [INFO ] com.qa.learning.tests.AlertsTest - === AlertsTest suite complete ===
+2026-03-23 14:25:37 [INFO ] com.qa.learning.tests.CheckBoxTest - === Starting CheckBoxTest suite ===
+2026-03-23 14:25:37 [INFO ] com.qa.learning.tests.CheckBoxTest - Setting up page for CheckBoxTest
+2026-03-23 14:25:37 [INFO ] com.qa.learning.pages.CheckBoxPage - Initializing CheckBoxPage locators
+2026-03-23 14:25:37 [INFO ] com.qa.learning.pages.CheckBoxPage - Navigating to CheckBox page
+2026-03-23 14:25:39 [INFO ] com.qa.learning.tests.CheckBoxTest - Running test: testSelectHomeCheckbox
+2026-03-23 14:25:39 [INFO ] com.qa.learning.tests.CheckBoxTest - Screenshot attached to Allure: checkbox_before
+2026-03-23 14:25:39 [INFO ] com.qa.learning.pages.CheckBoxPage - Tree already expanded on page load - skipping expand
+2026-03-23 14:25:39 [INFO ] com.qa.learning.pages.CheckBoxPage - Selecting Home checkbox
+2026-03-23 14:25:40 [INFO ] com.qa.learning.tests.CheckBoxTest - Screenshot attached to Allure: checkbox_after
+2026-03-23 14:25:40 [INFO ] com.qa.learning.pages.CheckBoxPage - Result display visible: true
+2026-03-23 14:25:40 [INFO ] com.qa.learning.pages.CheckBoxPage - Selected result displayed: You have selected :
+home
+desktop
+documents
+downloads
+notes
+commands
+workspace
+office
+wordFile
+excelFile
+react
+angular
+veu
+public
+private
+classified
+general
+2026-03-23 14:25:40 [INFO ] com.qa.learning.tests.CheckBoxTest - ✅ Test passed - result: You have selected :
+home
+desktop
+documents
+downloads
+notes
+commands
+workspace
+office
+wordFile
+excelFile
+react
+angular
+veu
+public
+private
+classified
+general
+2026-03-23 14:25:40 [INFO ] com.qa.learning.tests.CheckBoxTest - Screenshot attached to Allure: end_testSelectHomeCheckbox
+2026-03-23 14:25:40 [INFO ] com.qa.learning.tests.CheckBoxTest - Closing page after: Selecting Home checkbox selects all children
+2026-03-23 14:25:40 [INFO ] com.qa.learning.tests.CheckBoxTest - Setting up page for CheckBoxTest
+2026-03-23 14:25:40 [INFO ] com.qa.learning.pages.CheckBoxPage - Initializing CheckBoxPage locators
+2026-03-23 14:25:40 [INFO ] com.qa.learning.pages.CheckBoxPage - Navigating to CheckBox page
+2026-03-23 14:25:42 [INFO ] com.qa.learning.tests.CheckBoxTest - Running test: testNoResultBeforeSelection
+2026-03-23 14:25:42 [INFO ] com.qa.learning.tests.CheckBoxTest - Screenshot attached to Allure: checkbox_initial_state
+2026-03-23 14:25:42 [INFO ] com.qa.learning.tests.CheckBoxTest - ✅ Test passed - no result shown before selection
+2026-03-23 14:25:42 [INFO ] com.qa.learning.tests.CheckBoxTest - Screenshot attached to Allure: end_testNoResultBeforeSelection
+2026-03-23 14:25:42 [INFO ] com.qa.learning.tests.CheckBoxTest - Closing page after: Result section not visible before any selection
+2026-03-23 14:25:42 [INFO ] com.qa.learning.tests.CheckBoxTest - === CheckBoxTest suite complete ===
+2026-03-23 14:25:42 [INFO ] com.qa.learning.tests.DropdownTest - === Starting DropdownTest suite ===
+2026-03-23 14:25:43 [INFO ] com.qa.learning.tests.DropdownTest - Setting up page for DropdownTest
+2026-03-23 14:25:43 [INFO ] com.qa.learning.pages.DropdownPage - Initializing DropdownPage locators
+2026-03-23 14:25:43 [INFO ] com.qa.learning.pages.DropdownPage - Navigating to Dropdown Page
+2026-03-23 14:25:44 [INFO ] com.qa.learning.tests.DropdownTest - Testing selection of: Blue (value=1)
+2026-03-23 14:25:44 [INFO ] com.qa.learning.pages.DropdownPage - Selecting option: 1
+2026-03-23 14:25:45 [INFO ] com.qa.learning.pages.DropdownPage - Selected value: 1
+2026-03-23 14:25:45 [INFO ] com.qa.learning.tests.DropdownTest - Selected value returned: 1
+2026-03-23 14:25:45 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/end_testSelectMultipleOldMenuOptions_20260323_142545.png
+2026-03-23 14:25:45 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/end_testSelectMultipleOldMenuOptions_20260323_142545.png
+2026-03-23 14:25:45 [INFO ] com.qa.learning.tests.DropdownTest - Closing page after: [1] 1, Blue
+2026-03-23 14:25:45 [INFO ] com.qa.learning.tests.DropdownTest - Setting up page for DropdownTest
+2026-03-23 14:25:45 [INFO ] com.qa.learning.pages.DropdownPage - Initializing DropdownPage locators
+2026-03-23 14:25:45 [INFO ] com.qa.learning.pages.DropdownPage - Navigating to Dropdown Page
+2026-03-23 14:25:47 [INFO ] com.qa.learning.tests.DropdownTest - Testing selection of: Green (value=2)
+2026-03-23 14:25:47 [INFO ] com.qa.learning.pages.DropdownPage - Selecting option: 2
+2026-03-23 14:25:47 [INFO ] com.qa.learning.pages.DropdownPage - Selected value: 2
+2026-03-23 14:25:47 [INFO ] com.qa.learning.tests.DropdownTest - Selected value returned: 2
+2026-03-23 14:25:47 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/end_testSelectMultipleOldMenuOptions_20260323_142547.png
+2026-03-23 14:25:47 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/end_testSelectMultipleOldMenuOptions_20260323_142547.png
+2026-03-23 14:25:47 [INFO ] com.qa.learning.tests.DropdownTest - Closing page after: [2] 2, Green
+2026-03-23 14:25:47 [INFO ] com.qa.learning.tests.DropdownTest - Setting up page for DropdownTest
+2026-03-23 14:25:47 [INFO ] com.qa.learning.pages.DropdownPage - Initializing DropdownPage locators
+2026-03-23 14:25:47 [INFO ] com.qa.learning.pages.DropdownPage - Navigating to Dropdown Page
+2026-03-23 14:25:49 [INFO ] com.qa.learning.tests.DropdownTest - Testing selection of: Yellow (value=3)
+2026-03-23 14:25:49 [INFO ] com.qa.learning.pages.DropdownPage - Selecting option: 3
+2026-03-23 14:25:49 [INFO ] com.qa.learning.pages.DropdownPage - Selected value: 3
+2026-03-23 14:25:49 [INFO ] com.qa.learning.tests.DropdownTest - Selected value returned: 3
+2026-03-23 14:25:49 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/end_testSelectMultipleOldMenuOptions_20260323_142549.png
+2026-03-23 14:25:49 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/end_testSelectMultipleOldMenuOptions_20260323_142549.png
+2026-03-23 14:25:49 [INFO ] com.qa.learning.tests.DropdownTest - Closing page after: [3] 3, Yellow
+2026-03-23 14:25:49 [INFO ] com.qa.learning.tests.DropdownTest - Setting up page for DropdownTest
+2026-03-23 14:25:50 [INFO ] com.qa.learning.pages.DropdownPage - Initializing DropdownPage locators
+2026-03-23 14:25:50 [INFO ] com.qa.learning.pages.DropdownPage - Navigating to Dropdown Page
+2026-03-23 14:25:51 [INFO ] com.qa.learning.tests.DropdownTest - Testing selection of: Purple (value=4)
+2026-03-23 14:25:51 [INFO ] com.qa.learning.pages.DropdownPage - Selecting option: 4
+2026-03-23 14:25:51 [INFO ] com.qa.learning.pages.DropdownPage - Selected value: 4
+2026-03-23 14:25:51 [INFO ] com.qa.learning.tests.DropdownTest - Selected value returned: 4
+2026-03-23 14:25:51 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/end_testSelectMultipleOldMenuOptions_20260323_142551.png
+2026-03-23 14:25:52 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/end_testSelectMultipleOldMenuOptions_20260323_142551.png
+2026-03-23 14:25:52 [INFO ] com.qa.learning.tests.DropdownTest - Closing page after: [4] 4, Purple
+2026-03-23 14:25:52 [INFO ] com.qa.learning.tests.DropdownTest - Setting up page for DropdownTest
+2026-03-23 14:25:52 [INFO ] com.qa.learning.pages.DropdownPage - Initializing DropdownPage locators
+2026-03-23 14:25:52 [INFO ] com.qa.learning.pages.DropdownPage - Navigating to Dropdown Page
+2026-03-23 14:25:54 [INFO ] com.qa.learning.tests.DropdownTest - Running test: testSelectReactDropdownOption
+2026-03-23 14:25:54 [INFO ] com.qa.learning.pages.DropdownPage - Opening React Select Dowpdown
+2026-03-23 14:25:54 [INFO ] com.qa.learning.pages.DropdownPage - Selecting option: 0-0
+2026-03-23 14:25:54 [INFO ] com.qa.learning.pages.DropdownPage - React dropdown selected text: Group 1, option 1
+2026-03-23 14:25:54 [INFO ] com.qa.learning.tests.DropdownTest - Selected text was: Group 1, option 1
+2026-03-23 14:25:54 [INFO ] com.qa.learning.pages.BasePage - Capturing screenshot: target/screenshots/end_testSelectReactSelectOption_20260323_142554.png
+2026-03-23 14:25:54 [INFO ] com.qa.learning.pages.BasePage - Screenshot saved and attached to Allure report: target/screenshots/end_testSelectReactSelectOption_20260323_142554.png
+2026-03-23 14:25:54 [INFO ] com.qa.learning.tests.DropdownTest - Closing page after: Select Group 1 Option 1 from React Select dropdown
+2026-03-23 14:25:54 [INFO ] com.qa.learning.tests.DropdownTest - === DropdownTest suite complete ===
+2026-03-23 14:25:57 [INFO ] com.qa.learning.tests.RadioButtonTest - === Starting RadioButtonTest suite ===
+2026-03-23 14:25:58 [INFO ] com.qa.learning.tests.RadioButtonTest - Browser launched successfully
+2026-03-23 14:25:58 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
+2026-03-23 14:25:58 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
+2026-03-23 14:25:58 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
+2026-03-23 14:26:00 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'Impressive' radio button
+2026-03-23 14:26:00 [INFO ] com.qa.learning.tests.RadioButtonTest - Screenshot attached to Allure: impressive_radio_before
+2026-03-23 14:26:00 [INFO ] com.qa.learning.pages.BasePage - Selecting 'Impressive' radio button
+2026-03-23 14:26:00 [INFO ] com.qa.learning.tests.RadioButtonTest - Screenshot attached to Allure: impressive_radio_after
+2026-03-23 14:26:00 [INFO ] com.qa.learning.pages.BasePage - Result text: Impressive
+2026-03-23 14:26:00 [INFO ] com.qa.learning.tests.RadioButtonTest - Impressive selection verified
+2026-03-23 14:26:00 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page after test
+2026-03-23 14:26:00 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
+2026-03-23 14:26:00 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
+2026-03-23 14:26:00 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
+2026-03-23 14:26:02 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'Yes' radio button
+2026-03-23 14:26:02 [INFO ] com.qa.learning.tests.RadioButtonTest - Screenshot attached to Allure: yes_radio_before
+2026-03-23 14:26:02 [INFO ] com.qa.learning.pages.BasePage - Selecting 'Yes' radio button
+2026-03-23 14:26:03 [INFO ] com.qa.learning.tests.RadioButtonTest - Screenshot attached to Allure: yes_radio_after
+2026-03-23 14:26:03 [INFO ] com.qa.learning.pages.BasePage - Result text: Yes
+2026-03-23 14:26:03 [INFO ] com.qa.learning.tests.RadioButtonTest - Yes selection verified
+2026-03-23 14:26:03 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page after test
+2026-03-23 14:26:03 [INFO ] com.qa.learning.tests.RadioButtonTest - Creating new page and navigating to Radio Button page
+2026-03-23 14:26:03 [INFO ] com.qa.learning.pages.BasePage - Initializing RadioButtonPage locators
+2026-03-23 14:26:03 [INFO ] com.qa.learning.pages.BasePage - Navigating to Radio Button Page
+2026-03-23 14:26:05 [INFO ] com.qa.learning.tests.RadioButtonTest - Testing 'No' radio button disabled state
+2026-03-23 14:26:05 [INFO ] com.qa.learning.tests.RadioButtonTest - Screenshot attached to Allure: no_radio_disabled_state
+2026-03-23 14:26:05 [INFO ] com.qa.learning.pages.BasePage - 'No' radio button disabled status: true
+2026-03-23 14:26:05 [INFO ] com.qa.learning.tests.RadioButtonTest - 'No' radio button is correctly disabled
+2026-03-23 14:26:05 [INFO ] com.qa.learning.tests.RadioButtonTest - Closing page after test
+2026-03-23 14:26:05 [INFO ] com.qa.learning.tests.RadioButtonTest - === Ending RadioButtonTest suite ===
+2026-03-23 14:26:05 [INFO ] com.qa.learning.tests.RadioButtonTest - Browser and Playwright closed successfully
+2026-03-23 14:26:05 [INFO ] com.qa.learning.tests.TextBoxTest - === Starting TextBoxTest suite ===
+2026-03-23 14:26:05 [INFO ] com.qa.learning.tests.TextBoxTest - Browser launched successfully
+2026-03-23 14:26:05 [INFO ] com.qa.learning.tests.TextBoxTest - Creating new page and navigating to TextBox
+2026-03-23 14:26:05 [INFO ] com.qa.learning.pages.TextBoxPage - Initializing TextBoxPage locators
+2026-03-23 14:26:05 [INFO ] com.qa.learning.pages.TextBoxPage - Navigating to Text Box page
+2026-03-23 14:26:07 [INFO ] com.qa.learning.tests.TextBoxTest - Running test: testTextBoxForm
+2026-03-23 14:26:07 [INFO ] com.qa.learning.pages.TextBoxPage - Filling form with name: Susan Barrows and email: susan@test.com
+2026-03-23 14:26:07 [INFO ] com.qa.learning.pages.TextBoxPage - Clicking submit button
+2026-03-23 14:26:07 [INFO ] com.qa.learning.tests.TextBoxTest - Asserting output name is correct
+2026-03-23 14:26:07 [INFO ] com.qa.learning.tests.TextBoxTest - Asserting output email is correct
+2026-03-23 14:26:07 [INFO ] com.qa.learning.pages.TextBoxPage - Output name displayed: Name:Susan Barrows
+2026-03-23 14:26:07 [INFO ] com.qa.learning.tests.TextBoxTest - ✅ Test passed: Name:Susan Barrows
+2026-03-23 14:26:07 [INFO ] com.qa.learning.tests.TextBoxTest - Closing page after test
+2026-03-23 14:26:07 [INFO ] com.qa.learning.tests.TextBoxTest - === TextBoxTest suite complete - closing browser ===

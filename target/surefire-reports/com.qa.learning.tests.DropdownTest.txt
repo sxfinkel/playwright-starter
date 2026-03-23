@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.qa.learning.tests.DropdownTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.84 s -- in com.qa.learning.tests.DropdownTest

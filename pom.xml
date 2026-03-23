@@ -28,6 +28,13 @@
       <version>5.10.2</version>
       <scope>test</scope>
     </dependency>
+    <!-- JUnit 5 Params - needed for @ParameterizedTest and @CsvSource -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>5.10.2</version>
+      <scope>test</scope>
+    </dependency>
 
     <!-- Log4j2 API - logging interface -->
     <dependency>
@@ -91,6 +98,7 @@
               ${project.build.directory}/allure-results
             </allure.results.directory>
           </systemPropertyVariables>
+          <verboseOutput>true</verboseOutput>
         </configuration>
       </plugin>
 

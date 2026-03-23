@@ -2,6 +2,8 @@ package com.qa.learning.tests;
 
 import com.microsoft.playwright.*;
 import com.qa.learning.pages.CheckBoxPage;
+import io.qameta.allure.Allure;
+import java.io.ByteArrayInputStream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.*;
@@ -33,10 +35,21 @@ public class CheckBoxTest {
         checkBoxPage.navigate();
     }
 
+    // Helper - captures screenshot and attaches to Allure report
+    private void captureScreenshot(String name) {
+        byte[] screenshot = page.screenshot(
+                new Page.ScreenshotOptions().setFullPage(true));
+        Allure.addAttachment(name, "image/png",
+                new ByteArrayInputStream(screenshot), "png");
+        log.info("Screenshot attached to Allure: {}", name);
+    }
+
     @Test
     @DisplayName("Selecting Home checkbox selects all children")
     void testSelectHomeCheckbox() {
         log.info("Running test: testSelectHomeCheckbox");
+
+        captureScreenshot("checkbox_before");
 
         // Expand tree so all checkboxes are visible
         checkBoxPage.expandAll();
@@ -44,8 +57,11 @@ public class CheckBoxTest {
         // Click the Home checkbox
         checkBoxPage.selectHomeCheckbox();
 
+        captureScreenshot("checkbox_after");
+
         // Assert result section is visible
-        assertTrue(checkBoxPage.isResultDisplayed(), "Result should be displayed after selection");
+        assertTrue(checkBoxPage.isResultDisplayed(),
+                "Result should be displayed after selection");
 
         // Assert result contains expected text
         assertThat(page.locator(".display-result")).containsText("home");
@@ -58,20 +74,20 @@ public class CheckBoxTest {
     void testNoResultBeforeSelection() {
         log.info("Running test: testNoResultBeforeSelection");
 
-        // Without clicking anything the result section should not exist
+        captureScreenshot("checkbox_initial_state");
+
         boolean resultVisible = page.locator(".display-result").isVisible();
-        assertTrue(!resultVisible, "Result should not be visible before any selection");
+        assertTrue(!resultVisible, "Result should not be visible before selection");
 
         log.info("✅ Test passed - no result shown before selection");
     }
 
     @AfterEach
     void closePage(TestInfo testInfo) {
-        // Take end of test screenshot and attach to Allure
         String testName = testInfo.getTestMethod()
                 .map(m -> m.getName())
                 .orElse("unknown");
-        checkBoxPage.takeScreenshot("end_" + testName);
+        captureScreenshot("end_" + testName);
         log.info("Closing page after: {}", testInfo.getDisplayName());
         page.close();
     }
